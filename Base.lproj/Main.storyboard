@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherData" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="J0m-EZ-O9R"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jV6-Lr-1Zb">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSR-hp-snz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. London, HongKong" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgs-zu-kYl">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7f4-MG-xLn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Doj-0i-7je">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hOB-M2-1VL"/>
+                                </constraints>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZR-PV-uUQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loG-az-vj3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="loG-az-vj3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="AmF-xq-85m"/>
+                            <constraint firstItem="MSR-hp-snz" firstAttribute="top" secondItem="jV6-Lr-1Zb" secondAttribute="bottom" constant="8" id="Cyn-ST-5gB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MSR-hp-snz" secondAttribute="trailing" constant="114" id="DPj-v1-Yim"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MSR-hp-snz" secondAttribute="bottom" constant="570" id="I2v-b1-u6b"/>
+                            <constraint firstItem="J0m-EZ-O9R" firstAttribute="centerX" secondItem="MSR-hp-snz" secondAttribute="centerX" id="JCF-Ry-Dc7"/>
+                            <constraint firstItem="J0m-EZ-O9R" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ray-KG-sP1"/>
+                            <constraint firstItem="MSR-hp-snz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="118" id="SKf-GP-44G"/>
+                            <constraint firstItem="loG-az-vj3" firstAttribute="top" secondItem="Doj-0i-7je" secondAttribute="bottom" constant="8" id="Wg1-jC-he3"/>
+                            <constraint firstItem="Doj-0i-7je" firstAttribute="top" secondItem="Cgs-zu-kYl" secondAttribute="bottom" constant="8" id="aGX-lk-nm9"/>
+                            <constraint firstItem="jV6-Lr-1Zb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="d1x-7z-qfA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="loG-az-vj3" secondAttribute="bottom" constant="277" id="dCC-P4-Zun"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Doj-0i-7je" secondAttribute="trailing" constant="147" id="dXD-j0-go4"/>
+                            <constraint firstItem="loG-az-vj3" firstAttribute="top" secondItem="Doj-0i-7je" secondAttribute="bottom" constant="8" id="hck-Bm-z8Y"/>
+                            <constraint firstItem="J0m-EZ-O9R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="ict-0q-0DA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jV6-Lr-1Zb" secondAttribute="bottom" constant="599" id="jOr-do-w8w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jV6-Lr-1Zb" secondAttribute="trailing" constant="17" id="n0R-z9-c1j"/>
+                            <constraint firstItem="Cgs-zu-kYl" firstAttribute="top" secondItem="MSR-hp-snz" secondAttribute="bottom" constant="8" id="nft-Hm-nRf"/>
+                            <constraint firstItem="loG-az-vj3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qkX-DH-5vG"/>
+                            <constraint firstItem="jV6-Lr-1Zb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="rHG-5k-agx"/>
+                            <constraint firstItem="Doj-0i-7je" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="147" id="sKJ-rB-kCp"/>
+                            <constraint firstItem="Cgs-zu-kYl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tHg-lg-OiX"/>
+                            <constraint firstItem="Doj-0i-7je" firstAttribute="top" secondItem="Cgs-zu-kYl" secondAttribute="bottom" constant="8" id="u89-xD-odh"/>
+                            <constraint firstItem="Cgs-zu-kYl" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vhP-ka-40d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="forecast" destination="loG-az-vj3" id="Vhg-Rt-Q1u"/>
+                        <outlet property="inputCity" destination="Cgs-zu-kYl" id="IES-f7-3px"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpeg" width="1000" height="667"/>
+    </resources>
+</document>
